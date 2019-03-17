@@ -1,35 +1,10 @@
-pageextension 50102 CustomerListExtension extends "Customer List"
-{
-    layout
-    {
-        // Add changes to page layout here
-        addlast(Content)
-        {
-            part(FieldList; "Object Explorer Fields")
-            {
-                ApplicationArea = All;
-            }
-        }
-    }
-
-    actions
-    {
-        // Add changes to page actions here
-    }
-
-    var
-        myInt: Integer;
-}
-
 page 50100 "Object Explorer"
 {
     PageType = List;
-
-    SourceTable = Object;
-    Caption = 'Object Explorer';
-    SourceTableView = sorting (Type) order(ascending);
-    UsageCategory = Administration;
+    UsageCategory = Lists;
     ApplicationArea = All;
+    SourceTable = Object;
+    SourceTableView = sorting (Type) order(ascending);
 
     layout
     {
@@ -59,24 +34,12 @@ page 50100 "Object Explorer"
 
                 }
             }
-
-            group(ObjectFields)
-            {
-                Caption = 'Table Fields';
-
-                part("Object List Fields"; "Object Explorer Fields")
-                {
-                    ApplicationArea = All;
-                    // SubPageLink = TableNo = field (ID);
-                }
-            }
         }
-        area(Factboxes)
+        area(FactBoxes)
         {
-            part("Object Fields Factbox"; "Object Explorer Fields")
+            part(ObjectListFactBox; "Object Explorer Fields Factbox")
             {
                 ApplicationArea = All;
-                // SubPageLink = TableNo = field (ID);
             }
         }
     }
@@ -109,73 +72,104 @@ page 50100 "Object Explorer"
                 end;
             }
         }
+        area(Navigation)
+        {
+            action(FieldList)
+            {
+                // RunObject = Page "Object Explorer Fields";
+                Image = Line;
+
+                trigger OnAction()
+                var
+                    FieldList: Page "Object Explorer Fields";
+                    FieldRec: Record "Field";
+                begin
+                    clear(FieldList);
+
+                    if (Type = Type::Table) then begin
+                        FieldRec.reset;
+                        FieldRec.SetRange(TableNo, ID);
+                        FieldList.SetTableView(FieldRec);
+                    end;
+                    FieldList.runmodal();
+                end;
+            }
+        }
     }
 }
-
 page 50101 "Object Explorer Fields"
 {
-    Caption = 'Table Fields';
-    PageType = ListPart;
+    PageType = List;
+    SourceTable = 2000000041;
+
+    UsageCategory = Lists;
     ApplicationArea = All;
-    UsageCategory = Administration;
-    SourceTable = Field;
-    Editable = false;
 
     layout
     {
-        area(Content)
+        area(content)
         {
-            repeater(General)
+            repeater(Group)
             {
-                field(TableName; TableName)
+                field(TableNo; TableNo)
                 {
-                    ApplicationArea = All;
 
                 }
-
-                field(FieldName; FieldName)
+                field(TableName; TableName)
                 {
 
+                }
+                field(FieldName; FieldName)
+                {
+                    ApplicationArea = All;
                 }
 
                 field("Field Caption"; "Field Caption")
                 {
-
+                    ApplicationArea = All;
                 }
 
                 field(Type; Type)
                 {
-
+                    ApplicationArea = All;
                 }
-
                 field(Len; Len)
                 {
 
                 }
-
-                field(Enabled; Enabled)
-                {
-
-                }
-
                 field(OptionString; OptionString)
-                {
-
-                }
-
-                field(RelationTableNo; RelationTableNo)
-                {
-
-                }
-
-                field(RelationFieldNo; RelationFieldNo)
                 {
 
                 }
             }
         }
     }
+}
 
-    var
-        myInt: Integer;
+page 50102 "Object Explorer Fields Factbox"
+{
+    PageType = ListPart;
+    SourceTable = 2000000041;
+
+    UsageCategory = Lists;
+    ApplicationArea = All;
+
+    layout
+    {
+        area(content)
+        {
+            repeater(Group)
+            {
+                field("Field Caption"; "Field Caption")
+                {
+                    ApplicationArea = All;
+                }
+
+                field(Type; Type)
+                {
+                    ApplicationArea = All;
+                }
+            }
+        }
+    }
 }

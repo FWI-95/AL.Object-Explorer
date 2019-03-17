@@ -2,23 +2,7 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Object Explorer">
     <body>
-      <group id="body">
-        <trans-unit id="Page 3372015730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Object Explorer</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Object Explorer - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3372015730 - Control 303349032 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Table Fields</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Object Explorer - Control ObjectFields - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2704700793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Table Fields</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Object Explorer Fields - Property Caption</note>
-        </trans-unit>
-      </group>
+      <group id="body" />
     </body>
   </file>
 </xliff>
