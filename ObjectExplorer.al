@@ -57,6 +57,7 @@ page 50100 "Object Explorer"
                 Promoted = true;
                 PromotedIsBig = true;
                 PromotedCategory = Process;
+                ShortcutKey = "Ctrl+R";
 
                 trigger OnAction();
                 begin
