@@ -1,25 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="en-US" original="Object Explorer">
+  <file datatype="xml" source-language="en-US" target-language="de-DE" original="Object Explorer">
     <body>
       <group id="body">
-        <trans-unit id="Page 3372015730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3372015730 - Property 2789712914" size-unit="char" translate="yes" xml:space="preserve">
           <source>Object Explorer</source>
+          <target>Objekt Explorer</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Object Explorer - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Object Explorer - Property CAption</note>
         </trans-unit>
         <trans-unit id="Page 3372015730 - Action 3851712227 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Run Object</source>
+          <target>Objekt starten</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Object Explorer - Action Run - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3372015730 - Action 3253695788 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Field List</source>
+          <target>Feldliste</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Object Explorer - Action FieldList - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2704700793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Field List</source>
+          <target>Feldliste</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Object Explorer Fields - Property Caption</note>
         </trans-unit>

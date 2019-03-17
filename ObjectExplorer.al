@@ -1,5 +1,6 @@
 page 50100 "Object Explorer"
 {
+    Caption = 'Object Explorer';
     PageType = List;
     UsageCategory = Lists;
     ApplicationArea = All;
@@ -50,8 +51,12 @@ page 50100 "Object Explorer"
         {
             action(Run)
             {
+                Caption = 'Run Object';
                 ApplicationArea = All;
                 Image = Continue;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
 
                 trigger OnAction();
                 begin
@@ -77,7 +82,11 @@ page 50100 "Object Explorer"
             action(FieldList)
             {
                 // RunObject = Page "Object Explorer Fields";
+                Caption = 'Field List';
                 Image = Line;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
 
                 trigger OnAction()
                 var
@@ -94,11 +103,91 @@ page 50100 "Object Explorer"
                     FieldList.runmodal();
                 end;
             }
+            action(ClearFilter)
+            {
+                ApplicationArea = All;
+                Image = ClearFilter;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Report;
+
+                trigger OnAction()
+                begin
+                    SetRange(Type);
+                end;
+            }
+            action(FilterTable)
+            {
+                ApplicationArea = All;
+                Image = FilterLines;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Report;
+
+                trigger OnAction()
+                begin
+                    SetRange(Type, Type::Table);
+                end;
+            }
+            action(FilterPage)
+            {
+                ApplicationArea = All;
+                Image = FilterLines;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Report;
+
+                trigger OnAction()
+                begin
+                    SetRange(Type, Type::Page);
+                end;
+            }
+            action(FilterCodeunit)
+            {
+                ApplicationArea = All;
+                Image = FilterLines;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Report;
+
+                trigger OnAction()
+                begin
+                    SetRange(Type, Type::Codeunit);
+                end;
+            }
+
+            action(FilterXMLPort)
+            {
+                ApplicationArea = All;
+                Image = FilterLines;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Report;
+
+                trigger OnAction()
+                begin
+                    SetRange(Type, Type::XMLport);
+                end;
+            }
+            action(FilterReport)
+            {
+                ApplicationArea = All;
+                Image = FilterLines;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Report;
+
+                trigger OnAction()
+                begin
+                    SetRange(Type, Type::Report);
+                end;
+            }
         }
     }
 }
 page 50101 "Object Explorer Fields"
 {
+    Caption = 'Field List';
     PageType = List;
     SourceTable = 2000000041;
 
