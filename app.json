@@ -1,0 +1,25 @@
+{
+  "id": "35d2121b-1746-49ed-9101-0df0ce33f926",
+  "name": "Object Explorer",
+  "publisher": "Default publisher",
+  "brief": "",
+  "description": "",
+  "version": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "13.0.0.0",
+  "application": "13.0.0.0",
+  "idRange": {
+    "from": 50100,
+    "to": 50149
+  },
+  "runtime": "2.3",
+  "target": "Internal",
+  "features": ["TranslationFile"]
+}
